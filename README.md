@@ -44,25 +44,35 @@ Ahora voy a comentar el fichero cd-front.yml
 
 En este caso, la ejecución del workflow se va a realizar de forma manual, es decir, dentro de Actions, nos vamos a nuestro workflow del cd y lo ejecutamos en nuestra rama main.
 
-captura 8 cd
+
+<img width="257" height="92" alt="captura 8 cd" src="https://github.com/user-attachments/assets/cc8b4881-0679-4b59-8180-0ff746d74b4a" />
+
 
 Se ejecutará en una máquina ubuntu, utilizo la actions de checkout v6 para clonar el repositorio, pero en este caso como vamos a subir la imagen a nuestro repositorio de Github, tenemos que indicarlo mediante la opción de registry:ghcr.io y luego incluir el usuario y el password, que se toman directamente desde github. 
 
-captura 9 cd
+
+<img width="485" height="317" alt="captura 9 cd" src="https://github.com/user-attachments/assets/c6fffbf5-4395-442c-85b9-4fa7c8f5ec85" />
+
 
 Seguidamente, se hace el build, que en este caso es buildx (es mejor que el build) y por último se hace el push. 
 
-captura 10 cd
+<img width="402" height="95" alt="captura 10" src="https://github.com/user-attachments/assets/14647a50-6ffb-4bc7-a3c8-d1696db6437f" />
+
 
 Un dato a tener en cuenta es que en el parámetro del with, en la opción tags, tenemos que incluir delante de todo ghcr.io
 
-captura 11
+<img width="517" height="117" alt="captura 11 cd" src="https://github.com/user-attachments/assets/fe9b51c4-6512-4f10-b2a5-e60f13122f6f" />
+
 
 con esto evitamos el siguiente error.
 
-captura 12
+<img width="1857" height="932" alt="captura 12" src="https://github.com/user-attachments/assets/8889ef1d-4cb3-4abf-885b-a9b4d9c78d8e" />
 
-También tendremos que ir a settings, actions y cambiar la opción a read and write permissions, para evitar el error que se muestra a continuación.
+
+También tendremos que ir a settings, actions y cambiar la opción a read and write permissions, para evitar otro error el cual no nos permitirá escribir en nuestro repositorio.
+
+<img width="1175" height="540" alt="captura 7 cd" src="https://github.com/user-attachments/assets/081c2396-7601-4048-a986-a902425429ce" />
+
 
 captura 7
 
