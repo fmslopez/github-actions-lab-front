@@ -3,10 +3,10 @@ name: Integración continua
 on:
   push:
     branches: [ main ]
-    paths: [ 'hangman-front/**' ]
+    paths: [ 'hangman-api/**' ]
   pull_request:
     branches: [ main ]
-    paths: [ 'hangman-front/**' ]
+    paths: [ 'hangman-api/**' ]
 
 jobs:
   build:
@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: 18
       - name: Build
-        working-directory: ./hangman-front
+        working-directory: ./hangman-api
         run: |
           npm ci
           npm run build
@@ -37,7 +37,7 @@ jobs:
         with:
           node-version: 18
       - name: Unit tests
-        working-directory: ./hangman-front
+        working-directory: ./hangman-api
         run: |
           npm ci
           npm run test
