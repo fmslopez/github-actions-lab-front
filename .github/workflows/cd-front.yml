@@ -22,5 +22,5 @@ jobs:
         uses: docker/build-push-action@v7
         with:
           push: true
-          tags: fmslopez/hangman-front:latest
+          tags: ghcr.io/fmslopez/hangman-front:latest
           context: ./hangman-front
