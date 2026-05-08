@@ -73,7 +73,3 @@ También tendremos que ir a settings, actions y cambiar la opción a read and wr
 
 <img width="1175" height="540" alt="captura 7 cd" src="https://github.com/user-attachments/assets/081c2396-7601-4048-a986-a902425429ce" />
 
-
-captura 7
-
-captura 13
